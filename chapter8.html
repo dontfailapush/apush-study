@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>APUSH Chapter 8 Study Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #F4F6F9; --surface: #FFFFFF; --surface-2: #EAEEF5; --ink: #16213A; --muted: #55617A; --line: #D6DCE7;
+    --blue: #23408E; --blue-soft: #DCE4F6; --brass: #8F6612; --brass-soft: #F3E6C6;
+    --good: #1C7048; --good-soft: #D9F0E3; --bad: #A8312B; --bad-soft: #F8DDDA;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0E1526; --surface: #16203A; --surface-2: #1E2B4A; --ink: #E7ECF6; --muted: #A2AEC6;
+      --line: #2B3A5E; --blue: #8FA9F0; --blue-soft: #22335F; --brass: #E0B65A; --brass-soft: #3A3018;
+      --good: #6FD3A0; --good-soft: #17382B; --bad: #F08A83; --bad-soft: #452224;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E1526; --surface: #16203A; --surface-2: #1E2B4A; --ink: #E7ECF6; --muted: #A2AEC6;
+    --line: #2B3A5E; --blue: #8FA9F0; --blue-soft: #22335F; --brass: #E0B65A; --brass-soft: #3A3018;
+    --good: #6FD3A0; --good-soft: #17382B; --bad: #F08A83; --bad-soft: #452224;
+  }
+  html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 64px); }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.55; -webkit-text-size-adjust: 100%; }
+  header.top { padding: 22px 18px 10px; max-width: 760px; margin: 0 auto; }
+  header.top h1 { font-family: var(--serif); font-weight: 700; font-size: 1.75rem; line-height: 1.12; margin: 0 0 6px; letter-spacing: -0.01em; }
+  header.top p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  nav.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+  nav.tabs .row { display: flex; gap: 6px; overflow-x: auto; padding: 10px 14px; max-width: 760px; margin: 0 auto; scrollbar-width: none; }
+  nav.tabs .row::-webkit-scrollbar { display: none; }
+  nav.tabs button { flex: 0 0 auto; font: 500 0.92rem var(--sans); color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 8px 15px; cursor: pointer; min-height: 40px; }
+  nav.tabs button[aria-selected="true"] { background: var(--blue); border-color: var(--blue); color: #fff; }
+  :root[data-theme="dark"] nav.tabs button[aria-selected="true"] { color: #0E1526; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) nav.tabs button[aria-selected="true"] { color: #0E1526; } }
+  button:focus-visible, summary:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+  main { max-width: 760px; margin: 0 auto; padding: 18px 14px 56px; }
+  h2 { font-family: var(--serif); font-size: 1.4rem; line-height: 1.2; margin: 26px 0 10px; }
+  h2:first-child { margin-top: 4px; }
+  h3 { font-family: var(--serif); font-size: 1.1rem; margin: 0 0 6px; }
+  p { margin: 0 0 12px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-bottom: 12px; }
+  .chip { display: inline-block; font: 500 0.78rem var(--sans); color: var(--brass); background: var(--brass-soft); border-radius: 6px; padding: 1px 8px; white-space: nowrap; vertical-align: 1px; }
+  .chip.ch { color: var(--blue); background: var(--blue-soft); }
+  .tag { display: inline-block; font: 500 0.78rem var(--sans); border-radius: 6px; padding: 2px 8px; background: var(--blue-soft); color: var(--blue); }
+  .muted { color: var(--muted); }
+  ul { margin: 0 0 4px; padding-left: 1.15rem; }
+  li { margin-bottom: 6px; }
+  ol { padding-left: 1.3rem; margin: 0; }
+  .lo { border-left: 5px solid var(--blue); }
+  .lo strong { font-family: var(--serif); font-size: 1.05rem; }
+  .tl { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--line); margin-left: 6px; }
+  .tl li { position: relative; padding: 0 0 14px 18px; margin: 0; }
+  .tl li::before { content: ""; position: absolute; left: -7px; top: 7px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--blue); }
+  .tl .yr { font-family: var(--serif); font-weight: 700; font-size: 1.05rem; color: var(--blue); }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 10px; }
+  details > summary { list-style: none; cursor: pointer; padding: 13px 16px; font-family: var(--serif); font-weight: 600; font-size: 1.05rem; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; min-height: 48px; }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary::after { content: "+"; font-family: var(--sans); font-weight: 500; color: var(--muted); font-size: 1.3rem; line-height: 1; }
+  details[open] > summary::after { content: "\2212"; }
+  details .body { padding: 0 16px 12px; }
+  details .sum-left { flex: 1; }
+  .term details { margin-bottom: 8px; }
+  .term summary { font-family: var(--sans); font-weight: 600; font-size: 1rem; }
+  .score { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 61px); z-index: 4; background: var(--bg); padding: 8px 0; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .score .n { font-family: var(--serif); font-size: 1.25rem; font-weight: 700; }
+  .btn { font: 500 0.9rem var(--sans); border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 10px; padding: 9px 14px; cursor: pointer; min-height: 40px; }
+  .q .stem { font-family: var(--serif); font-size: 1.08rem; line-height: 1.4; margin: 8px 0 12px; }
+  .q .meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .opt { display: block; width: 100%; text-align: left; font: 400 0.98rem var(--sans); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 11px 13px; margin-bottom: 8px; cursor: pointer; line-height: 1.4; }
+  .opt b { display: inline-block; width: 1.6em; color: var(--muted); font-weight: 600; }
+  .opt.correct { background: var(--good-soft); border-color: var(--good); }
+  .opt.wrong { background: var(--bad-soft); border-color: var(--bad); }
+  .opt:disabled { cursor: default; color: var(--ink); opacity: 1; }
+  .why { display: none; margin-top: 10px; padding: 11px 13px; border-radius: 10px; background: var(--surface-2); font-size: 0.94rem; }
+  .why.show { display: block; }
+  .why strong.ok { color: var(--good); }
+  .why strong.no { color: var(--bad); }
+  .essay ol li { margin-bottom: 8px; }
+  .seg { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 10px; align-items: center; }
+  .seg .lbl { color: var(--muted); font-size: 0.85rem; margin-right: 2px; }
+  .seg button { font: 500 0.88rem var(--sans); color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 7px 13px; cursor: pointer; min-height: 38px; }
+  .seg button[aria-pressed="true"] { background: var(--blue-soft); color: var(--blue); border-color: var(--blue); }
+  .opt.sel { border-color: var(--blue); background: var(--blue-soft); }
+  .tb { margin-top: 10px; padding: 10px 13px; border-radius: 10px; border: 1px dashed var(--line); font-family: var(--serif); font-size: 0.9rem; line-height: 1.5; color: var(--muted); word-break: break-word; }
+  .tb b { color: var(--ink); font-weight: 600; }
+  .submit-row { margin: 8px 0 20px; }
+  .btn.primary { background: var(--blue); color: #fff; border-color: var(--blue); }
+  :root[data-theme="dark"] .btn.primary { color: #0E1526; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn.primary { color: #0E1526; } }
+  @media (prefers-reduced-motion: no-preference) { .opt { transition: background-color .15s ease, border-color .15s ease; } }
+</style>
+<body>
+
+<header class="top">
+  <h1>APUSH Chapter 8 Study Guide (1801–1823)</h1>
+  <p>Covers <em>By the People</em> Chapter 8, &ldquo;Creating a New People, Expanding the Country&rdquo; &mdash; Jefferson's republicanism through the Monroe Doctrine.</p>
+</header>
+
+<nav class="tabs" aria-label="Study sections">
+  <div class="row" role="tablist">
+    <button role="tab" id="t-overview" aria-controls="p-overview" aria-selected="true">Overview</button>
+    <button role="tab" id="t-timeline" aria-controls="p-timeline" aria-selected="false">Timeline</button>
+    <button role="tab" id="t-sections" aria-controls="p-sections" aria-selected="false">Sections</button>
+    <button role="tab" id="t-terms" aria-controls="p-terms" aria-selected="false">Terms</button>
+    <button role="tab" id="t-practice" aria-controls="p-practice" aria-selected="false">Practice</button>
+  </div>
+</nav>
+
+<main>
+
+<!-- OVERVIEW -->
+<section id="p-overview" role="tabpanel" aria-labelledby="t-overview">
+  <h2>The one-sentence version</h2>
+  <p>Chapter 8 covers Jefferson's, Madison's, and Monroe's presidencies, 1801&ndash;1823: Jefferson's small-government republicanism and the Second Great Awakening reshaped American politics and religion (8.1&ndash;8.2), the Louisiana Purchase and Lewis and Clark doubled the nation and pushed it toward the Pacific (8.3), unresolved tensions with Britain and Indian nations erupted into the War of 1812 (8.4), and the peace that followed let the U.S. absorb Florida, stake a claim to Oregon, and declare the Western Hemisphere off-limits to new European colonies with the Monroe Doctrine (8.5).</p>
+
+  <h2>The five objectives at a glance</h2>
+  <div class="card lo"><strong>8.1 &mdash; Jefferson and the Republican Ideal</strong> <span class="chip ch">pp. 229–233</span>
+    <p class="muted" style="margin:6px 0 0">Jefferson's small-government style, Marbury v. Madison and judicial review, the agrarian ideal and expanding white male suffrage, and the private ironies of his life at Monticello.</p></div>
+  <div class="card lo"><strong>8.2 &mdash; The Ideal of Religious Freedom</strong> <span class="chip ch">pp. 234–238</span>
+    <p class="muted" style="margin:6px 0 0">The "wall of separation," the end of state-supported churches, the Second Great Awakening and Cane Ridge, and the growth of black, Catholic, and Jewish religious life.</p></div>
+  <div class="card lo"><strong>8.3 &mdash; The Louisiana Purchase and Lewis and Clark</strong> <span class="chip ch">pp. 239–243</span>
+    <p class="muted" style="margin:6px 0 0">Why Jefferson bought Louisiana, the city of New Orleans, and the Corps of Discovery's journey to the Pacific and back.</p></div>
+  <div class="card lo"><strong>8.4 &mdash; The War of 1812</strong> <span class="chip ch">pp. 243–250</span>
+    <p class="muted" style="margin:6px 0 0">Impressment and the embargo, Tecumseh and Tenskwatawa's resistance, the course of the war, and the Treaty of Ghent and Battle of New Orleans.</p></div>
+  <div class="card lo"><strong>8.5 &mdash; Expanding American Territory and Influence</strong> <span class="chip ch">pp. 251–254</span>
+    <p class="muted" style="margin:6px 0 0">Jackson in Florida, the Adams-Onís Treaty, the Oregon Country agreements, and the Monroe Doctrine.</p></div>
+
+  <h2>How the test questions are asked</h2>
+  <div class="card">
+    <h3>Remember the Facts <span class="tag">easy</span></h3>
+    <p>Direct recall: what an event was, who did something, what a document said.</p>
+  </div>
+  <div class="card">
+    <h3>Understand the Connections <span class="tag">moderate to hard</span></h3>
+    <p>Cause and effect, comparisons, and true/false judgment calls. Watch for "All of the following were TRUE&hellip; EXCEPT" and "What was causing the GREATEST problem for&hellip;". Options are kept similar in length on purpose, so you can't guess by which one sounds more detailed.</p>
+  </div>
+  <div class="card">
+    <h3>Strategy for this chapter</h3>
+    <ul>
+      <li>Keep the three presidents and their dates straight: Jefferson (1801&ndash;1809) &rarr; Madison (1809&ndash;1817) &rarr; Monroe (1817&ndash;1825).</li>
+      <li>Don't confuse the two Jefferson-era laws: the Embargo Act (1807, banned all foreign trade) vs. the Non-Intercourse Act (1809, reopened trade except with Britain and France).</li>
+      <li>Keep the Shawnee brothers straight: Tenskwatawa (the Prophet, religious leader) vs. Tecumseh (military and diplomatic leader).</li>
+      <li>Don't confuse the postwar treaties: Treaty of Ghent (1814, ends the War of 1812) vs. Rush-Bagot Treaty (1817, demilitarizes the Great Lakes) vs. Anglo-American Convention (1818, joint Oregon claim) vs. Adams-Onís Treaty (1819, Spain cedes Florida).</li>
+      <li>For EXCEPT questions, check each option true or false against the text, then pick the one that's false.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="p-timeline" role="tabpanel" aria-labelledby="t-timeline" hidden>
+  <h2>Events in order, Chapter 8</h2>
+  <ul class="tl" id="tl"></ul>
+</section>
+
+<!-- SECTIONS -->
+<section id="p-sections" role="tabpanel" aria-labelledby="t-sections" hidden>
+  <h2>Section by section</h2>
+  <p class="muted">Tap a section to open it. The chip shows the chapter and textbook pages.</p>
+  <div id="sections"></div>
+</section>
+
+<!-- TERMS -->
+<section id="p-terms" role="tabpanel" aria-labelledby="t-terms" hidden>
+  <h2>Key terms, Chapter 8</h2>
+  <p class="muted">Try to define each one before you tap it.</p>
+  <div class="term" id="terms"></div>
+</section>
+
+<!-- PRACTICE -->
+<section id="p-practice" role="tabpanel" aria-labelledby="t-practice" hidden>
+  <h2>Practice questions</h2>
+  <div class="seg" role="group" aria-label="Question set">
+    <span class="lbl">Set</span>
+    <button type="button" id="setHard" aria-pressed="true">Hard (24)</button>
+    <button type="button" id="setWarm" aria-pressed="false">Easy (24)</button>
+  </div>
+  <div class="seg" role="group" aria-label="Mode">
+    <span class="lbl">Mode</span>
+    <button type="button" id="modeExam" aria-pressed="true">Exam (answers at the end)</button>
+    <button type="button" id="modePractice" aria-pressed="false">Practice (instant feedback)</button>
+  </div>
+  <p class="muted" id="setNote"></p>
+  <div class="score">
+    <div><span class="n" id="scoreNum">0 / 0</span> <span class="muted" id="scoreLbl">answered</span></div>
+    <button class="btn" id="resetBtn" type="button">Start over</button>
+  </div>
+  <div id="qs"></div>
+  <div class="submit-row" id="submitRow"><button class="btn primary" id="submitBtn" type="button">Submit exam and show answers</button></div>
+
+  <h2>Analyze It (essays)</h2>
+  <div id="essays"></div>
+</section>
+
+</main>
+<script>
+(function () {
+  "use strict";
+
+  var TIMELINE = [["1799","James McGready begins revivals in Logan County, Kentucky (“Rogue’s Harbor”)","p. 235",8],["1800","Thomas Jefferson elected president; calls his win the “Revolution of 1800”","p. 228",8],["1801","Jefferson inaugurated; Congress repeals the Judiciary Act of 1801, eliminating the “midnight judges”","p. 230",8],["Aug. 1801","Cane Ridge camp meeting in Kentucky draws roughly 20,000 people","pp. 235–236",8],["1802","Jefferson's letter to the Danbury Baptists coins “a wall of separation between Church and State”","p. 234",8],["1802","News reaches the U.S. of Napoleon's secret deal to reclaim Louisiana from Spain","p. 239",8],["1803","Louisiana Purchase: the U.S. buys 828,000 square miles from France for $15 million","p. 239",8],["1803","Supreme Court decides Marbury v. Madison, establishing judicial review","p. 230",8],["1804–1806","Lewis and Clark's Corps of Discovery explores the Louisiana Purchase and Oregon Country","p. 241",8],["1807","The Chesapeake-Leopard affair: HMS Leopard fires on the USS Chesapeake","p. 244",8],["1807","Congress passes the Embargo Act, banning U.S. ships from foreign ports","p. 244",8],["1809","The Non-Intercourse Act replaces the Embargo Act","p. 244",8],["Nov. 1811","William Henry Harrison destroys Prophetstown at the Battle of Tippecanoe","pp. 245–246",8],["June 1812","Congress declares war on Great Britain, beginning the War of 1812","p. 247",8],["1812","Detroit falls to British and Indian forces led by Tecumseh","pp. 247–248",8],["1813","U.S. naval victory on Lake Erie; Battle of the Thames and the death of Tecumseh","p. 248",8],["Aug. 1814","British troops burn Washington, D.C.","p. 248",8],["March 1814","Andrew Jackson defeats the Creeks at the Battle of Horseshoe Bend","pp. 248–249",8],["Dec. 1814","Treaty of Ghent signed, ending the War of 1812","p. 249",8],["Dec. 1814","Hartford Convention: New England Federalists meet to protest the war","p. 249",8],["Jan. 1815","Battle of New Orleans: Jackson's lopsided victory, fought after the treaty was signed","pp. 249–250",8],["1817","Rush-Bagot Treaty demilitarizes the Great Lakes","p. 250",8],["1818","Anglo-American Convention sets joint U.S.-British control of Oregon Country","p. 253",8],["1819","Adams-Onís Treaty: Spain cedes Florida to the United States","p. 253",8],["1822","Denmark Vesey's planned slave revolt in Charleston is uncovered","p. 237",8],["1823","Monroe Doctrine declares the Western Hemisphere closed to new European colonization","pp. 253–254",8]];
+  var SECTIONS = [{"t":"Jefferson the Political Leader","p":"pp. 229–230","ch":8,"b":["Jefferson shrank the federal bureaucracy, cut the army and navy, and abolished all internal taxes while keeping the tariff on imports.","He founded West Point mainly to replace Federalist officers with a professional, Republican-leaning officer corps.","Congress's repeal of the Judiciary Act of 1801 eliminated Adams's last-minute “midnight judges.”"]},{"t":"Marbury v. Madison and Judicial Review","p":"p. 230","ch":8,"b":["Jefferson's refusal to deliver William Marbury's judicial commission led to the 1803 Supreme Court case Marbury v. Madison.","Chief Justice John Marshall ruled Marbury could not get his job, handing Jefferson a practical win, but also declared the Court's power to strike down unconstitutional acts of Congress — judicial review.","It was the first use of judicial review; the Court would not use it again until 1857."]},{"t":"Rural America and the Agrarian Ideal","p":"pp. 231–232","ch":8,"b":["In 1801, about 90 percent of whites lived on farms, and most voters' lives fit Jefferson's ideal of a nation of independent farmers.","Property qualifications for voting virtually disappeared, expanding the white male electorate from roughly 20 percent to 70–80 percent in most states.","Early 1800s America was also violent: dueling among elites, frontier brawling, and routine violence against Indians and enslaved people."]},{"t":"Jefferson the Individual: Monticello and Sally Hemings","p":"p. 233","ch":8,"b":["While Jefferson simplified White House social life, Monticello was run lavishly by enslaved laborers who did all the hard work.","In 1802, James Callender publicized Jefferson's long relationship with his enslaved woman Sally Hemings; DNA evidence has since made their connection highly likely."]},{"t":"The Ideal of Religious Freedom","p":"p. 234","ch":8,"b":["Jefferson's 1802 letter to Connecticut's Danbury Baptists coined the phrase “a wall of separation between Church and State.”","In 1802, Connecticut, New Hampshire, Massachusetts, and Maryland still taxed citizens to support an official “religious establishment.”","Connecticut ended state support for all churches in 1817; Massachusetts, the last holdout, soon followed."]},{"t":"New Religious Expressions: The Second Great Awakening","p":"pp. 235–236","ch":8,"b":["Church attendance had dropped after the Revolution, and many elites, like Jefferson, were deists.","Beginning in the late 1790s, a wave of revivals — the Second Great Awakening — swept the country, climaxing at the 1801 Cane Ridge, Kentucky, camp meeting.","The revivals built up the Methodist and Baptist churches, which grew into the largest Protestant denominations; Methodism stayed centrally organized under bishops, while Baptist congregations remained decentralized."]},{"t":"Faith in the Slave Quarters and Free Black Churches","p":"pp. 236–237","ch":8,"b":["Slaveholders often organized worship emphasizing submission, but enslaved people held secret nighttime services expressing hope and a longing for freedom.","Richard Allen founded Philadelphia's Bethel Church in 1794, which grew into the African Methodist Episcopal Church.","Fear of religiously inspired revolts, especially after Denmark Vesey's 1822 plot in Charleston, led southern governments to restrict independent black churches, which continued to thrive in the North."]},{"t":"American Catholic and Jewish Communities","p":"p. 238","ch":8,"b":["John Carroll became the first American Catholic bishop in 1790, based in Maryland, and established Georgetown College.","Jewish congregations grew in East Coast cities and, by 1820, in cities like Richmond, New Orleans, Cincinnati, and Baltimore, adopting republican language in their own governance."]},{"t":"The Louisiana Purchase","p":"p. 239","ch":8,"b":["Spain's restrictions on the Mississippi and New Orleans, and then a secret French deal to reclaim Louisiana, pushed Jefferson to try to buy New Orleans for $6 million.","Napoleon, short on money and having lost his hold on Haiti, instead offered the entire Louisiana Territory for $15 million.","Despite his constitutional doubts about the purchase's legality, Jefferson went ahead; the deal nearly doubled the nation's size and secured both banks of the Mississippi."]},{"t":"The City of New Orleans","p":"pp. 239–240","ch":8,"b":["New Orleans in 1803 was a cosmopolitan, French- and Spanish-speaking, Catholic city unlike the rest of the overwhelmingly Protestant, English-speaking United States.","Enslaved people and free blacks there enjoyed freedoms — like gathering at Congo Square — unusual elsewhere in the U.S.; one-third of the city's black population was free."]},{"t":"The Lewis and Clark Expedition","p":"pp. 241–243","ch":8,"b":["Jefferson sent Meriwether Lewis and William Clark's Corps of Discovery to study the new territory and report on Spanish and French power, with Sacagawea and Clark's slave York among the party.","The Nez Perce, aided by Sacagawea's connection to a woman named Watkuweis, fed and guided the starving expedition over the Rockies in 1805.","The expedition reached the Pacific, built Fort Clatsop, and returned to St. Louis in September 1806, opening the way for traders like John Jacob Astor."]},{"t":"Renewed Tension Between the United States and Great Britain","p":"pp. 243–244","ch":8,"b":["British impressment of American sailors, and the 1807 Chesapeake-Leopard affair, pushed the U.S. toward conflict with Britain.","Jefferson's 1807 Embargo Act, meant to pressure Britain, instead devastated the American economy; the 1809 Non-Intercourse Act replaced it."]},{"t":"Renewed Tension Between Whites and Indians: Tecumseh and the Prophet","p":"pp. 244–246","ch":8,"b":["Shawnee brothers Tenskwatawa (“the Prophet”) and Tecumseh built a multi-tribal, British-aided alliance centered at Prophetstown to resist white expansion.","In November 1811, while Tecumseh was away, William Henry Harrison destroyed Prophetstown at the Battle of Tippecanoe."]},{"t":"War and Its Consequences","p":"pp. 247–250","ch":8,"b":["War Hawks like Henry Clay pushed Madison toward war in 1812; the invasion of Canada failed and Detroit fell to the British and Tecumseh.","American victories on Lake Erie and at the Battle of the Thames (where Tecumseh died) were offset by the British burning of Washington in 1814.","The Treaty of Ghent (Dec. 1814) restored prewar borders; Jackson's January 1815 victory at New Orleans came after the treaty but boosted American pride and his own fame.","New England Federalists protested the war at the Hartford Convention, which backfired on their party once news of victory arrived."]},{"t":"Florida and Oregon","p":"pp. 251–253","ch":8,"b":["Andrew Jackson's 1817 campaign against the Seminoles in Florida, including the execution of two British subjects, created an international incident.","Spain, more worried about its Latin American colonies than Florida, agreed in the 1819 Adams-Onís Treaty to cede Florida and transfer its Oregon claims for $5 million in assumed debts.","The 1817 Rush-Bagot Treaty and 1818 Anglo-American Convention demilitarized the Great Lakes and set joint U.S.-British control of Oregon."]},{"t":"The Monroe Doctrine","p":"pp. 253–254","ch":8,"b":["Russian claims in the Pacific Northwest and revolutions in Latin America and Europe pushed Monroe and John Quincy Adams to act.","They declined Britain's proposed joint declaration so the U.S. could keep its own future options open, then used Monroe's December 1823 message to Congress to declare the Americas closed to new European colonization — the Monroe Doctrine."]}];
+  var TERMS = [["republicanism","A complex, changing body of ideas, values, and assumptions around Jefferson and Madison's political organizing in the late 1790s–1800s, emphasizing equality and independence over hierarchy and deference. p. 229",8],["tariff","A tax on imports; one of the few taxes Jefferson kept after abolishing internal federal taxes. p. 230",8],["midnight judges","The Jeffersonian Democratic-Republicans' name for the federal judges John Adams appointed in his last days in office under the Judiciary Act of 1801. p. 230",8],["judicial review","The power, established by Marbury v. Madison (1803), for federal courts to review and strike down acts of Congress as unconstitutional. p. 230",8],["Marbury v. Madison","The 1803 Supreme Court case in which Chief Justice John Marshall asserted the Court's power of judicial review while handing Jefferson a practical political win. p. 230",8],["wall of separation between church and state","Phrase coined by Jefferson in an 1802 letter to Connecticut Baptists, expressing that government and churches should not interfere with each other. p. 234",8],["religious establishment","A state-supported official church; by 1802, Connecticut, New Hampshire, Massachusetts, and Maryland still taxed citizens to support one. p. 234",8],["deist","One who sees God as a distant force revealed through nature rather than divine revelation; Jefferson and many elites held this view. p. 235",8],["Second Great Awakening","A wave of emotional religious revivals in the early-to-mid 1800s, exemplified by the 1801 Cane Ridge camp meeting, that built up the Methodist and Baptist churches. p. 235",8],["Louisiana Purchase","The 1803 U.S. purchase of 828,000 square miles of French territory west of the Mississippi for $15 million, nearly doubling the nation's size. p. 239",8],["Corps of Discovery","The team led by Meriwether Lewis and William Clark that explored the Louisiana Purchase and Oregon Country in 1804–1806, aided by Sacagawea and Clark's enslaved man York. p. 241",8],["Embargo Act","An 1807 law, pushed by Jefferson, banning American ships from leaving for any foreign port in response to British impressment; it devastated the U.S. economy without forcing Britain to change course. p. 244",8],["Non-Intercourse Act","An 1809 law that replaced the Embargo Act, reopening trade with all nations except Britain and France. p. 244",8],["impressment","The British Royal Navy's practice of stopping American ships and forcing sailors into British service, a major cause of the War of 1812. p. 244",8],["War Hawks","Members of Congress, mostly from the South and West and led by Henry Clay and Felix Grundy, who pushed aggressively for war with Britain after 1810. p. 247",8],["Tecumseh and Tenskwatawa (the Prophet)","Shawnee half-brothers who built a multi-tribal alliance at Prophetstown; Tenskwatawa led a religious revival while Tecumseh organized military resistance, aided by the British. p. 245",8],["Battle of Tippecanoe","William Henry Harrison's November 1811 attack that destroyed Prophetstown while Tecumseh was away, pushing the alliance toward open war. pp. 245–246",8],["Battle of the Thames","An 1813 U.S. victory in southern Canada in which Tecumseh was killed, ending his tribal confederation. p. 248",8],["Treaty of Ghent","The December 1814 treaty ending the War of 1812 and restoring prewar borders between the U.S. and Britain. p. 249",8],["Hartford Convention","A December 1814 meeting of New England Federalists to protest the War of 1812 and assert states' right of nullification; it ended up discrediting the Federalist Party. p. 249",8],["Battle of New Orleans","Andrew Jackson's lopsided January 1815 victory over the British, fought after the Treaty of Ghent was signed but before news reached the armies. pp. 249–250",8],["Rush-Bagot Treaty","An 1817 treaty that demilitarized the Great Lakes between the United States and British Canada. p. 250",8],["Adams-Onís Treaty","An 1819 treaty in which Spain ceded Florida to the United States and transferred its claims to Oregon, in exchange for $5 million in assumed debts. p. 253",8],["Monroe Doctrine","President Monroe's December 1823 declaration that the Western Hemisphere was closed to further European colonization and interference. pp. 253–254",8]];
+  var TOPIC_TITLE = {"8.1":"Jefferson and the Republican Ideal","8.2":"The Ideal of Religious Freedom","8.3":"Beyond the Mississippi: The Louisiana Purchase and the Expedition of Lewis and Clark","8.4":"The War of 1812","8.5":"Expanding American Territory and Influence"};
+  var HARD_RAW = [{"lo":"8.1","q":"All of the following were part of Jefferson's effort to shrink the federal government EXCEPT:","o":["He cut the size of the army and navy","He abolished internal federal taxes","He abolished the tariff on imported goods along with all other taxes","He founded the military academy at West Point to build a Republican officer corps"],"a":2,"w":"Jefferson kept the tariff on imports even as he eliminated internal taxes.","p":"p. 230"},{"lo":"8.1","q":"What was the practical, as opposed to symbolic, significance of the Marbury v. Madison decision?","o":["It forced Jefferson to appoint Marbury as planned","It established that the Supreme Court could declare an act of Congress unconstitutional","It abolished the Judiciary Act of 1801 outright","It gave Congress the power to overturn Supreme Court rulings"],"a":1,"w":"Marshall's ruling asserted judicial review for the first time, while leaving Jefferson's own political victory untouched.","p":"p. 230"},{"lo":"8.1","q":"Why does the chapter describe Jefferson's presidency as full of ironies?","o":["Because he opposed judicial review yet relied on it to win reelection","Because he supported a national bank despite campaigning against one","Because a critic of big government and a skeptic of orthodox religion presided over both a religious revival and a more commercial, expansive nation","Because he was a Federalist who governed as a Democratic-Republican"],"a":2,"w":"The chapter highlights the gap between Jefferson's personal beliefs and the dramatic religious and economic changes of his era.","p":"p. 229"},{"lo":"8.1","q":"How did voting rights change between the colonial era and the early 1800s, according to the chapter?","o":["Property qualifications for voting virtually disappeared, expanding the white male electorate from about 20 percent to 70–80 percent","Property qualifications were extended to include free black men","Voting rights contracted as states imposed new property requirements","Women gained the right to vote in most states"],"a":0,"w":"The expansion applied specifically to white men; voting restrictions related to race and gender continued or even grew.","p":"p. 231"},{"lo":"8.1","q":"All of the following were true of violence in early 1800s America EXCEPT:","o":["Dueling was a common way for men of high social standing to settle grudges","Divorce rates increased as women refused to remain in violent marriages","Alcohol consumption roughly doubled between 1790 and 1820","Violence against enslaved people was treated as seriously as violence against free citizens"],"a":3,"w":"The chapter states that beating, rape, or killing of enslaved people was seldom considered a matter of concern beyond the plantation.","p":"p. 232"},{"lo":"8.2","q":"What distinguished the Methodist and Baptist approaches to church organization during the Second Great Awakening?","o":["Methodism was tightly organized under bishops while Baptist congregations were highly decentralized","Baptists used circuit riders while Methodists relied on farmer-preachers","Both denominations were organized identically under a national synod","Methodism rejected emotional worship while Baptists embraced it"],"a":0,"w":"Methodist bishops and circuit riders contrasted with the Baptists' congregation-by-congregation independence.","p":"p. 236"},{"lo":"8.2","q":"Why, according to Lyman Beecher's later reflection, did Connecticut's churches actually benefit from losing state support?","o":["State funding had been too small to matter","Connecticut continued to fund churches informally","Voluntary efforts, societies, missions, and revivals gave churches a deeper influence than state support ever had","Connecticut's churches merged into a single denomination"],"a":2,"w":"Beecher, who had fought to keep the religious establishment, later admitted disestablishment strengthened religion in Connecticut.","p":"p. 234"},{"lo":"8.2","q":"How did slaveholders' religious services for enslaved people typically differ from the secret worship enslaved people organized for themselves?","o":["Slaveholders' services emphasized submission and obedience, while secret worship expressed longing for freedom","There was no meaningful difference between the two","Secret worship was always led by white missionaries","Slaveholders' services were held at night in secluded places"],"a":0,"w":"Many enslaved people, like those Litt Young described, heard sanctioned preaching about obedience but gathered separately for their own worship.","p":"p. 236"},{"lo":"8.2","q":"What effect did fears like Denmark Vesey's 1822 planned revolt have on independent black churches in the South?","o":["Southern governments encouraged their growth to monitor congregations","They had no effect on church policy","They led directly to the founding of the African Methodist Episcopal Church","Southern governments moved to block the growth of independent black churches"],"a":3,"w":"Fear of religiously inspired rebellion led southern governments to restrict independent black congregations after 1822.","p":"p. 237"},{"lo":"8.2","q":"Why was religious freedom especially important to Catholics and Jews in the Jeffersonian era, according to the chapter?","o":["It let them form their own religious organizations, free of government control and often free of full authority by their own senior leaders","It guaranteed them representation in Congress","It exempted them from all taxation","It required other denominations to fund their institutions"],"a":0,"w":"The chapter emphasizes the freedom to organize independently as especially valuable to small religious minorities.","p":"p. 238"},{"lo":"8.3","q":"What changed Napoleon's mind about holding onto Louisiana and led him to offer the entire territory rather than just New Orleans?","o":["The U.S. Navy threatened to attack French ships","Failure to suppress the Haitian slave revolt and his need for money for the European war made Louisiana less valuable","Spain demanded the territory back","Britain offered to buy Louisiana first"],"a":1,"w":"With Haiti's sugar economy slipping from French control and war expenses mounting, Napoleon decided to sell.","p":"p. 239"},{"lo":"8.3","q":"What constitutional concern did Jefferson have about the Louisiana Purchase, and how did he resolve it?","o":["He believed the purchase was unconstitutional and refused to proceed","He had doubts that the Constitution authorized such a purchase but moved ahead anyway because of its practical benefits","He amended the Constitution before completing the purchase","He had Congress overrule the Supreme Court on the matter"],"a":1,"w":"Jefferson set aside his strict-construction doubts once he saw the purchase's political and practical advantages.","p":"p. 239"},{"lo":"8.3","q":"How did race relations and the status of enslaved and free black people in pre-1803 New Orleans compare to the rest of the United States?","o":["New Orleans had no slavery at all before 1803","Enslaved people and free blacks in New Orleans had freedoms, such as gathering at Congo Square, that were unimaginable elsewhere in the U.S.","New Orleans had stricter slave codes than the rest of the U.S.","Race relations in New Orleans were identical to those in Kentucky and Tennessee"],"a":1,"w":"One-third of New Orleans's black population was free, far higher than in Kentucky or Tennessee, with more social and economic latitude.","p":"pp. 239–240"},{"lo":"8.3","q":"What was the purpose of the Lewis and Clark expedition beyond scientific exploration, according to Jefferson?","o":["To gather intelligence on Spanish and French military power and assert American dominance in North America","To establish a permanent colony on the Pacific coast","To negotiate a formal peace treaty with the Nez Perce","To map a route for a transcontinental railroad"],"a":0,"w":"Jefferson wanted a full report on European military strength in the region as much as scientific data.","p":"p. 241"},{"lo":"8.3","q":"Why were the Nez Perce willing to help the starving Corps of Discovery in 1805, according to the oral history recorded from Red Bear's grandson?","o":["They had been promised gold by the expedition","A Nez Perce woman, Watkuweis, who had been well treated by white people, urged her people to show the newcomers no harm","They mistook Lewis and Clark for British traders","They were forced to help by a treaty with Spain"],"a":1,"w":"Watkuweis's earlier good treatment by whites shaped how her people responded to Lewis and Clark.","p":"p. 243"},{"lo":"8.4","q":"All of the following contributed to tension between the United States and Great Britain before 1812 EXCEPT:","o":["British impressment of American sailors","British support for Tecumseh's confederacy","The Royal Navy's blockade and seizure of American merchant ships","A formal British alliance with Spain against the United States"],"a":3,"w":"The chapter describes British ties to Tecumseh and naval policy as key tensions, not an alliance with Spain.","p":"pp. 244–245"},{"lo":"8.4","q":"Why did Jefferson's Embargo Act of 1807 fail to achieve its goal?","o":["Britain had full warehouses and could buy food elsewhere, while the embargo devastated the American economy instead","Congress repealed it before it could take effect","Britain immediately agreed to stop impressment","France refused to honor the embargo and declared war"],"a":0,"w":"Jefferson misjudged Britain's ability to withstand the embargo, while American shipping and farming suffered badly.","p":"p. 244"},{"lo":"8.4","q":"How did the War Hawks' goals for the War of 1812 compare to New England Federalists' views of the war?","o":["Both groups supported the war equally","War Hawks opposed war while Federalists supported it","War Hawks pushed for war and territorial expansion, while New England Federalists opposed it as economically ruinous and held the Hartford Convention in protest","Both groups wanted to invade Florida rather than Canada"],"a":2,"w":"War Hawks like Clay wanted territorial gains, while New England's shipping-dependent economy suffered, fueling Federalist protest.","p":"pp. 247–249"},{"lo":"8.4","q":"Why is the War of 1812 often described as a disaster for American Indians despite the United States' mixed military record against Britain?","o":["Tecumseh's death and American victories broke tribal alliances and opened Ohio, Indiana, and Creek lands to rapid white settlement","Indian tribes were not involved in the war at all","Britain abandoned all of its Indian allies before the war began","The Treaty of Ghent gave Indian nations their own protected territory"],"a":0,"w":"The war ended tribal ability to ally with a foreign power and accelerated the loss of Indian lands in the Old Northwest and Southwest.","p":"pp. 248–249"},{"lo":"8.4","q":"What made the Battle of New Orleans significant even though it was fought after the Treaty of Ghent had already been signed?","o":["It reversed the terms of the treaty in America's favor","It made Andrew Jackson a national hero and helped convince Britain to honor the treaty's terms","It led to a second, harsher treaty with Britain","It had no real significance since the war was already over"],"a":1,"w":"The lopsided victory boosted American morale and reassured Britain it should stick to the treaty rather than press its advantage.","p":"pp. 249–250"},{"lo":"8.5","q":"How did Andrew Jackson's 1817 invasion of Florida create an international incident?","o":["He negotiated directly with Spain without authorization","He formally annexed Florida without Congressional approval","He attacked a Spanish naval fleet","He executed two British subjects accused of aiding the Seminoles"],"a":3,"w":"The executions of Arbuthnot and Armbrister, both British subjects, caused an international uproar even though Indian executions did not.","p":"p. 252"},{"lo":"8.5","q":"Why was Spain willing to trade Florida and its Oregon claims to the United States in 1819?","o":["Spain wanted U.S. assurances it would not aid independence movements in Spanish America, and had little interest in Florida itself","The United States threatened to declare war on Spain","Spain wanted to focus its resources on defending Texas from Jackson","Britain pressured Spain to give up Florida"],"a":0,"w":"Spain cared far more about protecting Texas and its Latin American colonies than about Florida.","p":"p. 252"},{"lo":"8.5","q":"What was the key diplomatic trade-off behind the Monroe Doctrine's response to George Canning's proposed joint declaration?","o":["Monroe and Adams readily agreed to Canning's proposal","Britain refused to discuss the Americas with the United States at all","Monroe and Adams rejected a joint statement with Britain so the U.S. could still pursue its own future claims to Spanish territory like Texas and Cuba","The United States ceded its claims to Oregon in exchange for British support"],"a":2,"w":"A joint declaration would have locked the U.S. out of future territorial ambitions in Spanish America, so Monroe and Adams acted alone.","p":"p. 254"},{"lo":"8.5","q":"What was the combined effect of the Adams-Onís Treaty and the Anglo-American Convention on U.S. claims to Oregon?","o":["They ended all U.S. interest in Oregon","They gave the United States as strong a claim to Oregon as Britain or Russia, even though the border question would not be resolved until 1846","They immediately established the modern U.S.-Canada border in Oregon","They transferred Oregon entirely to Russian control"],"a":1,"w":"Together, the two treaties strengthened the weak early U.S. claim to Oregon without settling the issue outright.","p":"p. 253"}];
+  var WARM_RAW = [{"lo":"8.1","q":"What did Thomas Jefferson call his election as president in 1800?","o":["The Revolution of 1800","The Era of Good Feelings","The Second American Revolution","The People's Triumph"],"a":0,"w":"Jefferson called his victory the “Revolution of 1800,” marking a peaceful transfer of power to his Democratic-Republicans.","p":"p. 228"},{"lo":"8.1","q":"What landmark case established the Supreme Court's power of judicial review?","o":["Fletcher v. Peck","McCulloch v. Maryland","Marbury v. Madison","Worcester v. Georgia"],"a":2,"w":"In 1803, Marbury v. Madison established that federal courts could declare acts of Congress unconstitutional.","p":"p. 230"},{"lo":"8.1","q":"What were the federal judges that John Adams appointed just before leaving office called?","o":["Lame duck judges","Midnight judges","Twilight judges","Outgoing judges"],"a":1,"w":"Democratic-Republicans dubbed them “midnight judges” because of when Adams appointed them.","p":"p. 230"},{"lo":"8.1","q":"About what percentage of the U.S. population in 1801 were enslaved African Americans?","o":["About 50 percent","About 35 percent","About 5 percent","About 17 percent"],"a":3,"w":"Of a population just over 5.3 million, almost 900,000 were enslaved — roughly 17 percent.","p":"p. 231"},{"lo":"8.1","q":"What happened to property qualifications for voting among white men during the early 1800s?","o":["They were raised to limit the electorate","They remained unchanged from the colonial era","They virtually disappeared in most states","They were replaced by literacy tests"],"a":2,"w":"Property qualifications for voting virtually disappeared, expanding the white male electorate to 70–80 percent in most states.","p":"p. 231"},{"lo":"8.2","q":"In his 1802 letter to the Danbury Baptists, what phrase did Jefferson use to describe the relationship between government and religion?","o":["Freedom of conscience","A wall of separation between Church and State","The establishment clause","Liberty of worship"],"a":1,"w":"The phrase became part of the American lexicon after Jefferson's letter was widely published.","p":"p. 234"},{"lo":"8.2","q":"Which state still had an official, tax-supported church as late as 1802, according to the chapter?","o":["Virginia","Connecticut","Pennsylvania","New York"],"a":1,"w":"Connecticut, along with New Hampshire and Massachusetts, still required citizens to pay taxes supporting Congregational churches; Virginia had disestablished in 1786.","p":"p. 234"},{"lo":"8.2","q":"What religious revival began in the late 1790s and swept the country in the early 1800s?","o":["The Great Awakening","The Second Great Awakening","The Burned-Over District Revival","The Methodist Reformation"],"a":1,"w":"The Second Great Awakening climaxed with the 1801 Cane Ridge camp meeting in Kentucky.","p":"p. 235"},{"lo":"8.2","q":"Who founded Philadelphia's Bethel Church in 1794, which grew into the African Methodist Episcopal Church?","o":["Denmark Vesey","Nat Turner","Richard Allen","John Carroll"],"a":2,"w":"Richard Allen, a formerly enslaved man who purchased his freedom, organized the Bethel Church after white congregations proved unwelcoming.","p":"p. 236"},{"lo":"8.2","q":"Who was appointed the first Catholic bishop in America in 1790?","o":["John Carroll","James McGready","Timothy Dwight","Lyman Beecher"],"a":0,"w":"John Carroll, based in Maryland, later became Archbishop of Baltimore.","p":"p. 238"},{"lo":"8.3","q":"How much did the United States pay France for the Louisiana Purchase?","o":["$5 million","$6 million","$15 million","$28 million"],"a":2,"w":"Napoleon offered the entire territory for $15 million after the U.S. had only offered $6 million for New Orleans alone.","p":"p. 239"},{"lo":"8.3","q":"Who did Jefferson send to Paris to negotiate the purchase of New Orleans?","o":["James Monroe and Robert Livingston","Meriwether Lewis and William Clark","John Quincy Adams and Henry Clay","James Madison and Albert Gallatin"],"a":0,"w":"Monroe and Livingston were authorized to offer $6 million for New Orleans, or seek an alliance with Britain if talks failed.","p":"p. 239"},{"lo":"8.3","q":"Who led the Corps of Discovery along with Meriwether Lewis?","o":["Zebulon Pike","William Clark","Thomas Freeman","John Jacob Astor"],"a":1,"w":"Lewis, Jefferson's private secretary, and Clark, an army officer, co-led the expedition.","p":"p. 241"},{"lo":"8.3","q":"Which Shoshone woman served as a guide and translator for the Lewis and Clark expedition?","o":["Pocahontas","Sacagawea","Watkuweis","Carlota d'Erneville"],"a":1,"w":"Sacagawea joined with her French-trapper partner Charbonneau and newborn child, proving essential to the expedition's success.","p":"p. 241"},{"lo":"8.3","q":"Who explored the Mississippi, Arkansas, and Red River valleys for Jefferson on expeditions separate from Lewis and Clark?","o":["Zebulon Pike","Thomas Freeman","John Jacob Astor","William Clark"],"a":3,"w":"Actually, both Zebulon Pike and Thomas Freeman led these separate Jefferson-authorized expeditions, not Clark.","p":"p. 242"},{"lo":"8.4","q":"What British practice of stopping American ships and forcing sailors into the Royal Navy helped cause the War of 1812?","o":["Blockade","Impressment","Embargo","Quartering"],"a":1,"w":"Between 1803 and 1812, 3,000–6,000 Americans were impressed into British service.","p":"p. 244"},{"lo":"8.4","q":"What 1807 law banned American ships from leaving for any foreign port?","o":["The Non-Intercourse Act","The Navigation Act","The Tariff of Abominations","The Embargo Act"],"a":3,"w":"Jefferson's Embargo Act aimed to pressure Britain and France but mainly hurt the American economy.","p":"p. 244"},{"lo":"8.4","q":"Who were the two Shawnee brothers who led Indian resistance in the Old Northwest before the War of 1812?","o":["Red Eagle and Black Hawk","Tecumseh and Tenskwatawa","Little Turtle and Blue Jacket","Pontiac and Cornstalk"],"a":1,"w":"Tecumseh led military resistance while his brother Tenskwatawa, “the Prophet,” led a religious revival.","p":"p. 245"},{"lo":"8.4","q":"What event inspired Francis Scott Key to write “The Star-Spangled Banner”?","o":["The burning of Washington, D.C.","The Battle of New Orleans","The British bombardment of Fort McHenry","The Battle of the Thames"],"a":2,"w":"Key saw the American flag still flying over Fort McHenry after the September 1814 British bombardment.","p":"p. 249"},{"lo":"8.4","q":"What treaty ended the War of 1812?","o":["The Treaty of Paris","The Treaty of Ghent","The Treaty of Greenville","The Adams-Onís Treaty"],"a":1,"w":"Negotiators including Henry Clay and John Quincy Adams signed the Treaty of Ghent in December 1814.","p":"p. 249"},{"lo":"8.5","q":"In the 1819 Adams-Onís Treaty, what did Spain cede to the United States?","o":["Texas","California","Florida","Oregon"],"a":2,"w":"Spain also transferred its Oregon claims, but Florida itself was the territory ceded outright.","p":"p. 253"},{"lo":"8.5","q":"What 1817 treaty demilitarized the Great Lakes between the United States and Canada?","o":["The Jay Treaty","The Rush-Bagot Treaty","The Pinckney Treaty","The Treaty of Ghent"],"a":1,"w":"The Rush-Bagot Treaty was one of several postwar agreements settling the northern border.","p":"p. 250"},{"lo":"8.5","q":"In the Monroe Doctrine of 1823, what did the United States declare?","o":["That it would annex all of Spanish America","That the Western Hemisphere was closed to further European colonization","That it would join a European alliance against Spain","That Britain could keep Canada but no more territory"],"a":1,"w":"Monroe's message to Congress declared the Americas no longer open to new European colonization.","p":"pp. 253–254"},{"lo":"8.5","q":"Who helped Monroe formulate the policy that became known as the Monroe Doctrine?","o":["Henry Clay","Andrew Jackson","James Madison","John Quincy Adams"],"a":3,"w":"Secretary of State John Quincy Adams worked closely with Monroe on the policy's wording and strategy.","p":"p. 253"}];
+  var ESSAYS = [{"n":49,"lo":"8.1","topic":"Jefferson's Republicanism in Practice","prompt":"Defend or refute the statement: Thomas Jefferson, in both his policy choices and his personal life, embodied the spirit of republicanism in the early 1800s.","pts":["Define republicanism as the chapter presents it: equality and independence among white male citizens, suspicion of hierarchy and ceremony (p. 229).","Explain Jefferson's political choices: shrinking the federal bureaucracy, cutting the army and navy, and abolishing internal taxes while keeping the tariff (p. 230).","Discuss the Marbury v. Madison decision and how it reflected tension between the branches without overturning Jefferson's own political victory (p. 230).","Describe the agrarian ideal and the expansion of voting rights among white men in the early 1800s (p. 231).","Address the personal ironies: Jefferson's aristocratic life at Monticello, his relationship with Sally Hemings, and his status as a slaveholder uneasy about slavery (pp. 229, 233).","Weigh whether these contradictions undermine or are compatible with his public commitment to republican equality.","Write a concise and effective conclusion."]},{"n":50,"lo":"8.4","topic":"Causes and Consequences of the War of 1812","prompt":"Evaluate the causes of the War of 1812, and explain why historians describe its outcome as more beneficial to the United States than the course of the fighting would suggest.","pts":["Explain the roots of U.S.-British tension: impressment, the Chesapeake-Leopard affair, and the failure of the Embargo and Non-Intercourse Acts (p. 244).","Explain the role of the War Hawks and of Indian affairs in the Old Northwest, including Tecumseh and Tenskwatawa's confederacy (pp. 245–247).","Summarize the course of the war: the failed invasion of Canada, the burning of Washington, and the defense of Fort McHenry and New Orleans (pp. 247–250).","Explain the terms of the Treaty of Ghent and why the Battle of New Orleans mattered even though it came after the treaty was signed (pp. 249–250).","Assess the war's consequences: the end of Indian tribes' ability to ally with foreign powers, growing American manufacturing, and the national confidence described by Webster and Clay (pp. 248–250).","Write a concise and effective conclusion."]}];
+
+  function chapterOf(lo) { return lo.split(".")[0]; }
+
+  function tag(set) {
+    return set.map(function (Q, i) {
+      var n = i + 1, nn = n < 10 ? "0" + n : "" + n;
+      Q.s = (set === WARM_RAW) ? "Remember the Facts" : "Understand the Connections";
+      Q.diff = (set === WARM_RAW) ? "1 \u2013 Easy" : "3 \u2013 Difficult";
+      Q.topic = TOPIC_TITLE[Q.lo];
+      Q.title = "TB_C8_" + nn + "_Ch" + chapterOf(Q.lo) + "_" + Q.topic + "_" + Q.s + "_LO " + Q.lo;
+      return Q;
+    });
+  }
+  var WARM = tag(WARM_RAW);
+  var HARD = tag(HARD_RAW);
+
+  /* ---------- Helpers ---------- */
+  function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html !== undefined) e.innerHTML = html; return e; }
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+
+  /* ---------- Tabs ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function showTab(tab) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      var panel = document.getElementById(t.getAttribute("aria-controls"));
+      if (panel) panel.hidden = !on;
+    });
+    window.scrollTo(0, 0);
+  }
+  tabs.forEach(function (t) { t.addEventListener("click", function () { showTab(t); }); });
+
+  /* ---------- Timeline ---------- */
+  var tl = document.getElementById("tl");
+  TIMELINE.forEach(function (r) {
+    tl.appendChild(el("li", "", '<div class="yr">' + esc(r[0]) + '</div><div>' + esc(r[1]) + ' <span class="chip ch">Ch. ' + r[3] + '</span> <span class="chip">' + esc(r[2]) + '</span></div>'));
+  });
+
+  /* ---------- Sections ---------- */
+  var secHost = document.getElementById("sections");
+  SECTIONS.forEach(function (s) {
+    var d = el("details");
+    d.appendChild(el("summary", "", '<span class="sum-left">' + esc(s.t) + '</span><span class="chip ch">Ch. ' + s.ch + '</span> <span class="chip">' + esc(s.p) + '</span>'));
+    var body = el("div", "body");
+    body.innerHTML = "<ul>" + s.b.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>";
+    d.appendChild(body);
+    secHost.appendChild(d);
+  });
+
+  /* ---------- Terms ---------- */
+  var termHost = document.getElementById("terms");
+  TERMS.forEach(function (t) {
+    var d = el("details");
+    d.appendChild(el("summary", "", '<span class="sum-left">' + esc(t[0]) + '</span><span class="chip ch">Ch. ' + t[2] + '</span>'));
+    d.appendChild(el("div", "body", "<p>" + esc(t[1]) + "</p>"));
+    termHost.appendChild(d);
+  });
+
+  /* ---------- Practice ---------- */
+  var qHost = document.getElementById("qs");
+  var scoreNum = document.getElementById("scoreNum");
+  var scoreLbl = document.getElementById("scoreLbl");
+  var setNote = document.getElementById("setNote");
+  var submitRow = document.getElementById("submitRow");
+  var LETTERS = ["A", "B", "C", "D"];
+  var curSet = "hard";
+  var mode = "exam";
+  var items = [];
+  var submitted = false;
+
+  function setPressed(id, on) { document.getElementById(id).setAttribute("aria-pressed", on ? "true" : "false"); }
+
+  function updateScore() {
+    var answered = items.filter(function (it) { return it.chosen !== null; }).length;
+    if (mode === "exam" && !submitted) {
+      scoreNum.textContent = answered + " / " + items.length;
+      scoreLbl.textContent = "answered";
+    } else if (mode === "exam" && submitted) {
+      var c1 = items.filter(function (it) { return it.chosen === it.Q.a; }).length;
+      scoreNum.textContent = c1 + " / " + items.length;
+      scoreLbl.textContent = "correct";
+    } else {
+      var c2 = items.filter(function (it) { return it.done && it.chosen === it.Q.a; }).length;
+      var d2 = items.filter(function (it) { return it.done; }).length;
+      scoreNum.textContent = c2 + " / " + d2;
+      scoreLbl.textContent = "correct";
+    }
+  }
+
+  function reveal(it) {
+    it.done = true;
+    it.btns.forEach(function (b) { b.disabled = true; b.classList.remove("sel"); });
+    var ok = (it.chosen === it.Q.a);
+    if (it.chosen === null) {
+      it.btns[it.Q.a].classList.add("correct");
+    } else if (ok) {
+      it.btns[it.chosen].classList.add("correct");
+    } else {
+      it.btns[it.chosen].classList.add("wrong");
+      it.btns[it.Q.a].classList.add("correct");
+    }
+    var verdict = it.chosen === null ? "Not answered. Answer: " + LETTERS[it.Q.a] + "." : (ok ? "Correct." : "Answer: " + LETTERS[it.Q.a] + ".");
+    var html = '<strong class="' + (ok ? "ok" : "no") + '">' + esc(verdict) + "</strong> " + esc(it.Q.w) + ' <span class="chip ch">Ch. ' + chapterOf(it.Q.lo) + '</span> <span class="chip">' + esc(it.Q.p) + "</span>";
+    if (it.Q.title) {
+      html += '<div class="tb"><b>Answer:</b> ' + LETTERS[it.Q.a] +
+        "<br><b>Question Title:</b> " + esc(it.Q.title) +
+        "<br><b>Learning Objective:</b> " + esc(it.Q.lo) +
+        "<br><b>Topic:</b> " + esc(it.Q.topic) +
+        "<br><b>Skill Level:</b> " + esc(it.Q.s) +
+        "<br><b>Difficulty Level:</b> " + esc(it.Q.diff) + "</div>";
+    }
+    it.why.innerHTML = html;
+    it.why.classList.add("show");
+  }
+
+  function buildQuestions() {
+    var set = curSet === "hard" ? HARD : WARM;
+    qHost.innerHTML = "";
+    items = [];
+    submitted = false;
+    submitRow.style.display = mode === "exam" ? "" : "none";
+    setNote.textContent = curSet === "hard"
+      ? "24 hard questions covering Chapter 8, focused on causes, comparisons, and true/false judgment calls rather than trivia. Options are kept short and similar in length on purpose."
+      : "24 easier warm-up questions covering Chapter 8 on the main events, people, and terms."
+    ;
+    set.forEach(function (Q, i) {
+      var card = el("div", "card q");
+      card.appendChild(el("div", "meta", '<span class="tag">' + esc(Q.s) + '</span><span class="chip ch">Ch. ' + chapterOf(Q.lo) + '</span><span class="chip">LO ' + esc(Q.lo) + '</span>'));
+      card.appendChild(el("div", "stem", (i + 1) + ") " + esc(Q.q)));
+      var it = { Q: Q, btns: [], why: el("div", "why"), chosen: null, done: false };
+      Q.o.forEach(function (text, k) {
+        var b = el("button", "opt", "<b>" + LETTERS[k] + ")</b>" + esc(text));
+        b.type = "button";
+        b.addEventListener("click", function () {
+          if (it.done || submitted) return;
+          it.chosen = k;
+          if (mode === "practice") { reveal(it); }
+          else { it.btns.forEach(function (x, j) { x.classList.toggle("sel", j === k); }); }
+          updateScore();
+        });
+        it.btns.push(b);
+        card.appendChild(b);
+      });
+      card.appendChild(it.why);
+      qHost.appendChild(card);
+      items.push(it);
+    });
+    updateScore();
+  }
+
+  function buildEssays() {
+    var host = document.getElementById("essays");
+    host.innerHTML = "";
+    ESSAYS.forEach(function (E) {
+      var card = el("div", "card essay");
+      card.appendChild(el("p", "", "<strong>" + E.n + ") " + esc(E.prompt) + "</strong> <span class=\"chip ch\">Ch. " + chapterOf(E.lo) + "</span>"));
+      var d = el("details");
+      d.appendChild(el("summary", "", '<span class="sum-left">Show the ideal answer outline</span>'));
+      var body = el("div", "body");
+      body.innerHTML = "<p>An ideal answer will:</p><ol>" + E.pts.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ol>" +
+        '<div class="tb"><b>Question Title:</b> TB_C8_' + E.n + "_Ch" + chapterOf(E.lo) + "_" + esc(E.topic) + "_Analyze It_LO " + E.lo +
+        "<br><b>Learning Objective:</b> " + E.lo + "<br><b>Topic:</b> " + esc(E.topic) +
+        "<br><b>Skill Level:</b> Analyze It<br><b>Difficulty Level:</b> 3 \u2013 Difficult</div>";
+      d.appendChild(body);
+      card.appendChild(d);
+      host.appendChild(card);
+    });
+  }
+
+  document.getElementById("submitBtn").addEventListener("click", function () {
+    submitted = true;
+    items.forEach(reveal);
+    updateScore();
+    document.getElementById("qs").scrollIntoView();
+  });
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    buildQuestions();
+    document.getElementById("p-practice").scrollIntoView();
+  });
+  document.getElementById("setHard").addEventListener("click", function () { curSet = "hard"; setPressed("setHard", true); setPressed("setWarm", false); buildQuestions(); });
+  document.getElementById("setWarm").addEventListener("click", function () { curSet = "warm"; setPressed("setHard", false); setPressed("setWarm", true); buildQuestions(); });
+  document.getElementById("modeExam").addEventListener("click", function () { mode = "exam"; setPressed("modeExam", true); setPressed("modePractice", false); buildQuestions(); });
+  document.getElementById("modePractice").addEventListener("click", function () { mode = "practice"; setPressed("modeExam", false); setPressed("modePractice", true); buildQuestions(); });
+
+  buildQuestions();
+  buildEssays();
+})();
+</script>
+</body>
+</html>
